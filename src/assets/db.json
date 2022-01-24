@@ -1,0 +1,55 @@
+{
+    "offers": {
+        "cards": [
+            {
+                "id": "0",
+                "src": "assets/img/offers-1.jpg",
+                "alt": "Konsolidacja chwilówek",
+                "title": "Konsolidacja chwilówek",
+                "description": "Nie dajesz rady ze spłatą chwilówek? Zastanów się nad ich konsolidacją za pomocą kredytu (...)",
+                "link": "oferta/konsolidacja-chwilowek.html"
+            },
+            {
+                "id": "1",
+                "src": "assets/img/offers-2.jpg",
+                "alt": "Kredyt konsolidacyjny",
+                "title": "Kredyt konsolidacyjny",
+                "description": "Kredyt konsolidacyjny często jest narzędziem umożliwiającym terminowe spłacanie zobowiązań (...)",
+                "link": "oferta/kredyt-konsolidacyjny.html"
+            },
+            {
+                "id": "2",
+                "src": "assets/img/offers-3.jpg",
+                "alt": "Kredyt gotówkowy",
+                "title": "Kredyt gotówkowy",
+                "description": "Każdy z nas może się znaleźć w sytuacji, w której będzie potrzebował pieniędzy na zakup (...)",
+                "link": "oferta/kredyt-gotowkowy.html"
+            }
+        ]
+    },
+    "advantages": {
+        "cards": [
+            {
+                "id": "0",
+                "icon": "<i class='fas fa-user-friends'></i>",
+                "count": "2814",
+                "title": "Zadowolonych Klientów",
+                "text": "Ilość zadowolonych klientów najlepiej rekomenduje nasze usługi"
+            },
+            {
+                "id": "1",
+                "icon": "<i class='fas fa-calendar-alt'></i>",
+                "count": "7",
+                "title": "Lat Na Rynku",
+                "text": "Dzięki wieloletniemu stażu na rynku, nasza marka zapewnia doświadczenia i profesjonalizm"
+            },
+            {
+                "id": "2",
+                "icon": "<i class='fas fa-university'></i>",
+                "count": "18",
+                "title": "Banków i SKOK-ów",
+                "text": "Mnogość banków i SKOK-ów zapewnia optymalne, najlepsze warunki finansowe"
+            }
+        ]
+    }
+}

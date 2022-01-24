@@ -1,0 +1,12 @@
+.aboutus {
+    .wrapper {
+        padding: 2em 0;
+    }
+
+    &__text {
+        padding-top: 2em;
+        color: $blackColor;
+        font-size: clamp(1.6rem, 3vw, 2rem);
+        line-height: 1.6;
+    }
+}

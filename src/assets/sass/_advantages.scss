@@ -1,0 +1,142 @@
+.advantages {
+    position: relative;
+    text-align: center;
+    background-image: url('../img/advantages-sm.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 2, 51, .6);
+        z-index: -1;
+    }
+
+    .section__title {
+        color: $whiteColor;
+    }
+
+    .section__title::after {
+        background-color: $secondColor;
+    }
+
+    &__text {
+        margin: 0 auto;
+        padding-top: 2em;
+        max-width: 1200px;
+        color: $whiteColor;
+        font-size: clamp(1.8rem, 3vw, 2.2rem);
+        line-height: 1.7;
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10em;
+
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 6em 2.5em;
+            color: $mainColor;
+            background-color: $whiteColor;
+            border-radius: 2px;
+            transition: color .2s, transform .2s, background .2s;
+
+            &:not(:last-of-type) {
+                margin-bottom: 7em;
+            }
+
+            &:hover {
+                color: $whiteColor;
+                background: $mainColor;
+                transform: scale(1.04);
+            }
+
+            &:nth-of-type(2) {
+                color: $whiteColor;
+                background: $mainColor;
+
+                &:hover {
+                    color: $mainColor;
+                    background: $whiteColor;
+                }
+            }
+
+            &__img {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 80px;
+                height: 80px;
+                top: 0;
+                left: calc(50% - 40px);
+                transform: translateY(-50%);
+                background-color: $whiteColor;
+                border: 8px solid $secondColor;
+                border-radius: 50%;
+
+                i {
+                    color: $mainColor;
+                    font-size: 3.5rem;
+                }
+            }
+
+            &__count {
+                margin-bottom: 0.4em;
+                font-size: 6rem;
+                font-weight: 800;
+            }
+
+            &__title {
+                margin-bottom: 0.7em;
+                min-height: 60px;
+                font-size: 2.4rem;
+                font-weight: 600;
+            }
+
+            &__text {
+                font-size: 1.8rem;
+                line-height: 1.7;
+            }
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .advantages {
+        background-image: url('../img/advantages-md.jpg');
+    }
+}
+
+@media (min-width: 768px) {
+    .advantages {
+        &__cards {
+            flex-direction: row;
+            justify-content: space-between;
+
+            .card {
+                width: 32%;
+
+                &:not(:last-of-type) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .advantages {
+        background-image: url('../img/advantages-xl.jpg');
+    }
+}

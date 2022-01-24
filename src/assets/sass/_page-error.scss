@@ -1,0 +1,15 @@
+.page-error {
+    padding-top: 9em;
+    text-align: center;
+
+    img {
+        margin: 0 auto;
+        width: 80vw;
+        max-width: 400px;
+    }
+
+    &-text {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}

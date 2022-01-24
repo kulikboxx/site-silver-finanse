@@ -1,0 +1,96 @@
+@import 'animations';
+@import 'variables';
+@import 'header';
+@import 'aboutus';
+@import 'offers';
+@import 'advantages';
+@import 'contact';
+@import 'credit';
+@import 'application';
+@import 'privacy-policy';
+@import 'cookie';
+@import 'footer';
+@import 'page-error';
+@import 'modal';
+@import 'popup';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 49px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background-color: $whiteColor;
+}
+
+::selection {
+    color: $whiteColor;
+    background: $secondColor;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $secondColor;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%,
+            color-stop(.5, rgba(255, 255, 255, .2)),
+            color-stop(.5, transparent), to(transparent));
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 6em 2em;
+    text-align: center;
+}
+
+.section__title {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+    color: $blackColor;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    text-transform: uppercase;
+}
+
+.section__title::after {
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom: -8px;
+    width: 50%;
+    height: 4px;
+    transition: .1s linear;
+    transform-origin: center;
+    transform: translateX(-50%);
+    background: $secondColor;
+}
+
+.section__title:hover::after {
+    width: 110%;
+    max-width: 80vw;
+}

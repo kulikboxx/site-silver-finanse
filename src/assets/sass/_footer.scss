@@ -1,0 +1,170 @@
+.footer {
+    padding: 5em 2em;
+    background: linear-gradient(to bottom, #0e0e3b, #141546, #1b1c51, #21245c, #272b68);
+
+    &__container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 2em 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        row-gap: 4em;
+        color: $whiteColor;
+    }
+
+    &__offers,
+    &__navigation {
+        display: grid;
+        row-gap: 1em;
+    }
+
+    &__offers-title,
+    &__navigation-title {
+        color: $whiteColor;
+        font-size: 2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &__scope-title {
+        font-size: 2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &__scope-map {
+        margin-top: 1em;
+        max-width: 250px;
+    }
+
+    &__offers-link,
+    &__navigation-link,
+    &__contact-item {
+        color: $whiteColor;
+        font-size: 1.8rem;
+        text-decoration: none;
+    }
+
+    &__contact {
+        display: grid;
+        row-gap: 1em;
+        font-size: 1.7rem;
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    &__contact-item {
+        font-size: 1.8rem;
+    }
+
+    &__phone {
+        font-size: 2.8rem;
+        font-weight: 600;
+    }
+
+    &__representative {
+        font-size: 1.2rem;
+        line-height: 1.5;
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    &__company {
+        color: $whiteColor;
+        font-size: 1.2rem;
+    }
+
+    &__offers {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    &__navigation {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    &__scope {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    &__contact {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+
+    &__representative {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+
+    &__company {
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
+        line-height: 180%;
+
+        a {
+            color: $whiteColor;
+            text-decoration: none;
+        }
+    }
+
+    &__offers-link:hover,
+    &__navigation-link:hover,
+    &__contact-item:hover {
+        color: $secondColor;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer {
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-template-rows: repeat(3, auto);
+            row-gap: 2em;
+            column-gap: 2em;
+        }
+
+        &__offers {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            align-self: start;
+        }
+
+        &__navigation {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            align-self: start;
+        }
+
+        &__scope {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+            align-self: start;
+        }
+
+        &__contact {
+            grid-column: 4 / 5;
+            grid-row: 1 / 2;
+            align-self: start;
+        }
+
+        &__representative {
+            grid-column: 1 / 5;
+            grid-row: 2 / 3;
+        }
+
+        &__company {
+            grid-column: 1 / 5;
+            grid-row: 3 / 4;
+        }
+    }
+}

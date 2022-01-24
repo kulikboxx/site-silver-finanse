@@ -1,0 +1,377 @@
+.application {
+    padding-top: 9em;
+
+    &__warning {
+        margin-top: 2em;
+        padding: 1em;
+        width: 100%;
+        color: $mainColor;
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: left;
+        line-height: 1.5;
+        background-color: $sectionColor;
+        border-radius: 2px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        padding-top: 3em;
+        text-align: left;
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        textarea,
+        select {
+            margin-bottom: 0.8em;
+            padding: .4em;
+            width: 100%;
+            height: 45px;
+            color: $blackColor;
+            font-size: 1.6rem;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            background: $whiteColor;
+            border: 1px solid $greyColor;
+            border-radius: 2px;
+        }
+
+        input[type="text"]:first-of-type {
+            margin-bottom: 0;
+        }
+
+        input[type="radio"] {
+            position: relative;
+            z-index: 0;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                border-radius: 50%;
+                z-index: -1;
+            }
+        }
+
+        input[type="radio"].error::after {
+            box-shadow: 0 0 10px #ff0000;
+        }
+
+        input[type="text"].error,
+        input[type="tel"].error,
+        input[type="email"].error {
+            background-color: #efefef;
+            border: 1px solid #ff0000;
+            outline: none;
+        }
+
+        input[type="checkbox"].error {
+            box-shadow: 0 0 10px #ff0000;
+        }
+
+        select {
+            cursor: pointer;
+
+            &.error {
+                background-color: #efefef;
+                border: 1px solid #ff0000;
+                outline: none;
+            }
+        }
+
+        label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: left;
+
+            span {
+                color: $secondColor;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    &__married,
+    &__consent,
+    &__preferred,
+    &__bank-account,
+    &__bailiff,
+    &__arrear1,
+    &__arrear2,
+    &__contract,
+    &__delay1,
+    &__delay2 {
+        position: relative;
+
+        span.error__message {
+            display: block;
+            position: absolute;
+            top: 40px;
+            right: 3px;
+            height: 5px;
+            color: #ff0000;
+            font-size: 10px;
+            font-weight: 600;
+        }
+    }
+
+    &__title {
+        margin-bottom: 0.7em;
+        padding: 0.7em;
+        width: 100%;
+        color: $whiteColor;
+        font-size: 1.8rem;
+        text-align: center;
+        text-transform: uppercase;
+        background: $mainColor;
+        user-select: none;
+
+        span {
+            color: $secondColor;
+        }
+    }
+
+    &__box {
+        padding: 2em 0;
+    }
+
+    .products {
+        &__box {
+            display: flex;
+            padding: 1.5em 0;
+            align-items: center;
+
+            &:not(:nth-child(4)) {
+                font-size: 1.2rem;
+                user-select: none;
+                cursor: pointer;
+
+                input {
+                    height: 25px;
+                    width: 25px;
+                    cursor: pointer;
+                }
+
+                label {
+                    margin-left: 10px;
+                    font-size: 1.5rem;
+                }
+            }
+
+            &:nth-child(4) {
+                position: relative;
+                flex-direction: column;
+                align-items: flex-start;
+
+                span.error__message {
+                    display: block;
+                    position: absolute;
+                    top: 40px;
+                    right: 3px;
+                    height: 5px;
+                    color: #ff0000;
+                    font-size: 10px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    &__personal>div,
+    &__contact>div,
+    &__income>div,
+    &__credit>div {
+        position: relative;
+
+        span.error__message {
+            display: block;
+            position: absolute;
+            top: 25px;
+            right: 3px;
+            height: 5px;
+            color: #ff0000;
+            font-size: 10px;
+            font-weight: 600;
+        }
+    }
+
+    &__banks {
+        display: flex;
+        flex-direction: column;
+
+        label[for="banks"] {
+            font-size: 1.6rem;
+            margin: 1em 0;
+        }
+    }
+
+    &__bank {
+        label {
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8em;
+        }
+
+        input {
+            margin-right: 10px;
+            height: 25px;
+            width: 25px;
+            cursor: pointer;
+        }
+    }
+
+    &__message {
+        padding-top: 2em;
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+    }
+
+    &__agreement1,
+    &__agreement2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        line-height: 1.5;
+
+        input {
+            margin-bottom: 0.6em;
+            height: 25px;
+            width: 25px;
+            cursor: pointer;
+        }
+    }
+
+    &__agreement1 {
+        margin-bottom: 1.5em;
+    }
+
+    &__btn {
+        position: relative;
+        margin: 1em auto 0;
+        padding: 1em 3em;
+        width: max-content;
+        color: $whiteColor;
+        font-size: 1.8rem;
+        font-weight: 600;
+        background: $mainColor;
+        text-decoration: none;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 58px;
+        overflow: hidden;
+        cursor: pointer;
+        z-index: 0;
+
+        &:hover::after {
+            width: 100%;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: $secondColor;
+            transition: width .2s;
+            z-index: -1;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .application {
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            &__box:not(:nth-child(4)) {
+                width: 32%;
+            }
+
+            &__box:nth-child(4) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width:850px) {
+    .application {
+        &__personal {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        &__personal>div {
+            width: 49%;
+        }
+
+        &__contact {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__contact>div {
+            width: 32%;
+        }
+
+        &__income {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        &__income>div {
+            width: 49%;
+        }
+
+        &__credit {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        &__credit>div:nth-child(1),
+        &__credit>div:nth-child(2) {
+            width: 49%;
+        }
+
+        &__credit>div:nth-child(3),
+        &__credit>div:nth-child(4),
+        &__credit>div:nth-child(5) {
+            width: 32%;
+        }
+
+        &__banks {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 100%;
+
+            label[for="banks"] {
+                width: 100%;
+            }
+        }
+
+        &__bank {
+            width: 32%;
+        }
+    }
+}
